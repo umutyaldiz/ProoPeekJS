@@ -1,0 +1,19 @@
+/* width */
+.proo-peek-popup .body .cms::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.proo-peek-popup .body .cms::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.proo-peek-popup .body .cms::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* Handle on hover */
+.proo-peek-popup .body .cms::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

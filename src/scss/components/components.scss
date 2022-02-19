@@ -1,0 +1,25 @@
+.proo-peek-item{
+    position: relative;
+    @import 'layer';
+    @import 'countdown';
+}
+
+.proo-peek-popup{
+    position: absolute;
+    max-width: 100%; width: 320px; min-height: 100px;
+    background: #ffffff; border-radius: 10px; overflow: hidden; z-index: 1000;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.3);
+    transform: scale(.8);
+    opacity: 0;
+    transition: opacity .3s, transform .3s;
+    @import 'popup-head';
+    @import 'popup-body';
+    @import 'popup-button';
+
+    &.active{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@import 'popup-scrollbar';

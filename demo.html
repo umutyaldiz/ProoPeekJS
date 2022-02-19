@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProoPeekJS</title>
+
+    <link rel="stylesheet" href="dist/proopeek.min.css">
+    <style>
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: start;
+        }
+
+        .proo-peek-item {
+            display: block;
+            width: 300px;
+            height: 300px;
+            margin: 0 10px 20px;
+            background-color: blueviolet;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex">
+            <div class="proo-peek-item" peek-id="1"></div>
+            <div class="proo-peek-item" peek-id="2"></div>
+        </div>
+    </div>
+    <div class="proo-peek-popup-wrapper"></div>
+
+    <script src="dist/proopeek.min.js"></script>
+    <script>
+        new ProoPeekJS(".proo-peek-item", {
+            data: [
+                {
+                    "id": 1,
+                    "title": "1 Lorem ipsum dolar sit amet",
+                    "content": "<h1>Lorem Ipsum</h1> <h2>Lorem Ipsum</h2> <h3>Lorem Ipsum</h3> <h4>Lorem Ipsum</h4> <h5>Lorem Ipsum</h5> <h6>Lorem Ipsum</h6> <p>Contrary to <a href=\"https:\/\/www.gogle.com.tr\">popular</a> belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, <a href=\"#\">written</a> in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p> <p>The standard chunk of Lorem <a href=\"#\">Ipsum</a> used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>",
+                    "image": "https://umutyaldiz.com/fearchi/temp/news16x9.jpg",
+                    "url": "https://umutyaldiz.com/"
+                },
+                {
+                    "id": 2,
+                    "title": "2 Lorem ipsum dolar sit amet, Lorem ipsum dolar sit amet",
+                    "content": "<h1>Lorem Ipsum</h1> <h2>Lorem Ipsum</h2> <h3>Lorem Ipsum</h3> <h4>Lorem Ipsum</h4> <h5>Lorem Ipsum</h5> <h6>Lorem Ipsum</h6> <p>Contrary to <a href=\"https:\/\/www.gogle.com.tr\">popular</a> belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, <a href=\"#\">written</a> in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p> <p>The standard chunk of Lorem <a href=\"#\">Ipsum</a> used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>",
+                    "image": "https://umutyaldiz.com/fearchi/temp/news16x9.jpg",
+                    "url": "https://umutyaldiz.com/"
+                }
+            ],
+            enterThreshold: 300,
+            countdown: 1,
+        });
+    </script>
+</body>
+
+</html>
